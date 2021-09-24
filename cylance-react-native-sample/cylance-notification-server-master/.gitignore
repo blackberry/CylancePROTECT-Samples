@@ -1,0 +1,4 @@
+node_modules
+ngrok
+*.sqlite3
+firebase.json
