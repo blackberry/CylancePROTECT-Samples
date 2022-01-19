@@ -13,12 +13,11 @@
  * limitations under the License.
  *
  */
-let initalState = {
+let initialState = {
   loading: false,
   success: false,
-  // isError: false,
   data: '',
-  error: '',
+  error: ''
 };
 
 import {
@@ -28,7 +27,7 @@ import {
   RESET_LOGGED_DETECTIONS_DETECTION,
 } from '../../actions/detections/syslogDetections';
 
-const reducer = (state = initalState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_LOGGED_DETECTIONS_SUCCESS:
       return Object.assign({}, state, {
@@ -40,16 +39,14 @@ const reducer = (state = initalState, action) => {
       return Object.assign({}, state, {
         error: action.payload.error,
         loading: false,
-        isError: true,
       });
     case GET_LOGGED_DETECTIONS_START:
       return Object.assign({}, state, {
         loading: true,
-        isError: false,
         error: '',
       });
     case RESET_LOGGED_DETECTIONS_DETECTION:
-      return initalState;
+      return initialState;
     default:
       return state;
   }

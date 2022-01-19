@@ -13,7 +13,7 @@
  * limitations under the License.
  *
  */
-let initalState = {
+let initialState = {
   loading: false,
   success: false,
   isError: false,
@@ -26,7 +26,7 @@ import {
   GET_USER_ERROR,
 } from '../../actions/users/user';
 
-const reducer = (state = initalState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_USER_SUCCESS:
       return {

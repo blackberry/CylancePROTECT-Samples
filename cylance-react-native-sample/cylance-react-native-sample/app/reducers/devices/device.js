@@ -13,7 +13,7 @@
  * limitations under the License.
  *
  */
-let initalState = {
+let initialState = {
   loading: false,
   success: false,
   isError: false,
@@ -27,7 +27,7 @@ import {
   GET_DEVICE_ERROR,
 } from '../../actions/devices/device';
 
-const reducer = (state = initalState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_DEVICE_SUCCESS:
       return Object.assign({}, state, {

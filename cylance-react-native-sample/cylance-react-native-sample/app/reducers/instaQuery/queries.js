@@ -13,7 +13,7 @@
  * limitations under the License.
  *
  */
-let initalState = {
+let initialState = {
   loading: false,
   success: false,
   isError: false,
@@ -31,7 +31,7 @@ import {
   RESET_QUERIES,
 } from '../../actions/instaQuery/queries';
 
-const reducer = (state = initalState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ALL_QUERIES_COLLECTED:
       return {
@@ -63,7 +63,7 @@ const reducer = (state = initalState, action) => {
         success: false,
       };
     case RESET_QUERIES:
-      return initalState;
+      return initialState;
 
     default:
       return state;

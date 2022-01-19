@@ -13,7 +13,7 @@
  * limitations under the License.
  *
  */
-let initalState = {
+let initialState = {
   enabled: false,
   baseUrl: '',
   notificationsEnabled: false,
@@ -27,7 +27,7 @@ import {
   DISABLE_NOTIFICATIONS,
 } from '../../actions/settings/notificationserver';
 
-const reducer = (state = initalState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ENABLE_NOTIFICATIONS:
       return {

@@ -13,7 +13,7 @@
  * limitations under the License.
  *
  */
-let initalState = {
+let initialState = {
   loading: false,
   success: false,
   isError: false,
@@ -27,7 +27,7 @@ import {
   POST_REGISTER_ERROR,
 } from '../../actions/notifications/register';
 
-const reducer = (state = initalState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case POST_REGISTER_SUCCESS:
       return {

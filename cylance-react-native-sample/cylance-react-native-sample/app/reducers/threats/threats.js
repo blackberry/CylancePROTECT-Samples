@@ -13,7 +13,7 @@
  * limitations under the License.
  *
  */
-let initalState = {
+let initialState = {
   loading: false,
   success: false,
   isError: false,
@@ -29,7 +29,7 @@ import {
   GET_THREATS_ERROR,
 } from '../../actions/threats/threats';
 
-const reducer = (state = initalState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ALL_THREATS_COLLECTED:
       return {

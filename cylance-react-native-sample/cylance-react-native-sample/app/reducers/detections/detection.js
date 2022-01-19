@@ -13,7 +13,7 @@
  * limitations under the License.
  *
  */
-let initalState = {
+let initialState = {
   loading: false,
   success: false,
   isError: false,
@@ -28,7 +28,7 @@ import {
   RESET_DETECTION,
 } from '../../actions/detections/detection';
 
-const reducer = (state = initalState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_DETECTION_SUCCESS:
       return Object.assign({}, state, {
@@ -49,7 +49,7 @@ const reducer = (state = initalState, action) => {
         error: '',
       });
     case RESET_DETECTION:
-      return initalState;
+      return initialState;
     default:
       return state;
   }

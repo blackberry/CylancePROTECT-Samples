@@ -13,7 +13,7 @@
  * limitations under the License.
  *
  */
-let initalState = {
+let initialState = {
   isValidToken: false,
   loading: false,
   isError: false,
@@ -30,7 +30,7 @@ import {
   RESET_TOKEN_REDUCER,
 } from '../../actions/token/token';
 
-const reducer = (state = initalState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_TOKEN_SUCCESS:
       return {
@@ -64,7 +64,7 @@ const reducer = (state = initalState, action) => {
         endpoint: '',
       };
     case RESET_TOKEN_REDUCER:
-      return initalState;
+      return initialState;
     default:
       return state;
   }

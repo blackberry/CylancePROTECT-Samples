@@ -13,7 +13,7 @@
  * limitations under the License.
  *
  */
-let initalState = {
+let initialState = {
   loading: false,
   success: false,
   isError: false,
@@ -31,7 +31,7 @@ import {
   RESET_DEVICEDETECTIONS,
 } from '../../actions/detections/devicedetections';
 
-const reducer = (state = initalState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ALL_DEVICEDETECTIONS_COLLECTED:
       return {
@@ -63,7 +63,7 @@ const reducer = (state = initalState, action) => {
         error: '',
       };
     case RESET_DEVICEDETECTIONS:
-      return initalState;
+      return initialState;
     default:
       return state;
   }

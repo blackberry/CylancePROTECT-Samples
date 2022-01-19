@@ -479,6 +479,26 @@ export const CylanceAPI = {
         throw error;
       });
   },
+  lockdownDevice(serviceEndpointURL, token, device_id, days, hours, mins) {
+    const timeOption = `?value=true&expires=${days}:${hours}:${mins}`;
+    const endpoint = serviceEndpointURL.concat(`devicecommands/v2/${convertProtectIDToOpticsID(device_id)}/lockdown${timeOption}`);
+
+    const options = {
+      headers: {
+        Accept: 'application/json',
+        Authorization: 'Bearer ' + token,
+      }
+    };
+
+    return axios
+      .put(endpoint, {}, options)
+      .then((response) => {
+        return response;
+      })
+      .catch((error) => {
+        throw error;
+      });
+  }
 };
 
 export default CylanceAPI;
