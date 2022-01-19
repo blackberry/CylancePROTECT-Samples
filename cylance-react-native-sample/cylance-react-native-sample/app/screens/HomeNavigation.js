@@ -152,7 +152,7 @@ export const createTopTabNavigatorDetections = (props) => (
   </>
 );
 const TabNavigatorDetections = (props) => (
-  <TopTabNav.Navigator tabBar={(props) => <TopTabBarDetections {...props} />}>
+  <TopTabNav.Navigator tabBar={(props) => <TopTabBarDetections {...props} /> }>
     <TopTabNav.Screen name="syslog" component={createSysLogDetectionsStack} />
     <TopTabNav.Screen name="detections" component={createDetectionsStack} />
   </TopTabNav.Navigator>

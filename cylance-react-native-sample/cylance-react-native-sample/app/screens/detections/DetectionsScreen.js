@@ -118,7 +118,7 @@ function mapStateToProps(state) {
     isDetectionsLoading: state.detections.loading,
     isDetectionsSuccess: state.detections.success,
     isDetectionsError: state.detections.isError,
-    dectectionsError: state.detections.error,
+    detectionsError: state.detections.error,
     totalPages: state.detections.totalPages,
     isAllData: state.detections.isAllData,
   };

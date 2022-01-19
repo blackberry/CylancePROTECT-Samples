@@ -19,7 +19,8 @@ import 'react-native-gesture-handler';
 import {connect} from 'react-redux';
 import AuthForm from './components/AuthForm';
 import SettingsScreen from './screens/settings/SettingsScreen';
-import {NavigationContainer} from '@react-navigation/native';
+import LockdownScreen from './screens/lockdown/LockdownScreen';
+import {NavigationContainer, createNavigationContainerRef} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import * as tokenActions from './actions/token/token';
 import * as notificationActions from './actions/notifications/register';
@@ -54,6 +55,8 @@ const {Navigator, Screen} = createDrawerNavigator();
 
 const BottomTab = createBottomTabNavigator();
 
+const navigationRef = createNavigationContainerRef();
+
 async function requestUserPermission() {
   const authStatus = await messaging().requestPermission();
   const enabled =
@@ -66,6 +69,12 @@ async function requestUserPermission() {
   }
 }
 
+function navigate(name, params) {
+  if (navigationRef.isReady()) {
+    navigationRef.navigate(name, params);
+  }
+}
+
 class ReduxAsyncApp extends Component {
   componentDidMount() {
     requestUserPermission();
@@ -74,6 +83,55 @@ class ReduxAsyncApp extends Component {
       Alert.alert(
         notification.notification.title,
         notification.notification.body,
+        [
+          {
+            text: 'Quarantine device',
+            onPress: () => navigate('Lockdown', {deviceId: notification.data.device_id}),
+            style: 'cancel'
+          },
+          {
+            text: "Cancel",
+            style: "cancel"
+          },
+        ]
+      );
+    });
+
+    messaging().onNotificationOpenedApp(remoteMessage => {
+      const notification = remoteMessage;
+      Alert.alert(
+        notification.notification.title,
+        notification.notification.body,
+        [
+          {
+            text: 'Quarantine device',
+            onPress: () => navigate('Lockdown', {deviceId: notification.data.device_id}),
+            style: 'cancel'
+          },
+          {
+            text: "Cancel",
+            style: "cancel"
+          },
+        ]
+      );
+    });
+
+    messaging().getInitialNotification().then(remoteMessage => {
+      const notification = remoteMessage;
+      Alert.alert(
+        notification.notification.title,
+        notification.notification.body,
+        [
+          {
+            text: 'Quarantine device',
+            onPress: () => navigate('Lockdown', {deviceId: notification.data.device_id}),
+            style: 'cancel'
+          },
+          {
+            text: "Cancel",
+            style: "cancel"
+          },
+        ]
       );
     });
   }
@@ -124,11 +182,13 @@ class ReduxAsyncApp extends Component {
       <>
         <IconRegistry icons={EvaIconsPack} />
         <ApplicationProvider {...eva} theme={eva[this.props.theme]}>
-          <NavigationContainer>
+          <NavigationContainer ref={navigationRef}>
             <Navigator drawerContent={(props) => <DrawerContent {...props} />}>
               <Screen name="Home" component={HomeScreen} />
               <Screen name="Settings" component={SettingsScreen} />
+              <Screen name="Lockdown" component={LockdownScreen} />
             </Navigator>
+
           </NavigationContainer>
         </ApplicationProvider>
       </>

@@ -13,13 +13,13 @@
  * limitations under the License.
  *
  */
-let initalState = {
+let initialState = {
   theme: 'light',
 };
 
 import {SWITCH_THEME} from '../../actions/settings/theme';
 
-const reducer = (state = initalState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SWITCH_THEME:
       return {

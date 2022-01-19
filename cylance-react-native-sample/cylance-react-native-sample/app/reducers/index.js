@@ -35,6 +35,7 @@ import unregister from './notifications/unregister';
 import settingsTheme from './settings/theme';
 import notificationServer from './settings/notificationserver';
 import testConnection from './notifications/testConnection';
+import lockdown from './lockdown/lockdown';
 
 const rootReducer = combineReducers({
   user,
@@ -58,6 +59,7 @@ const rootReducer = combineReducers({
   notificationServer,
   testConnection,
   syslogDetectionsDevice,
+  lockdown,
 });
 
 export default rootReducer;

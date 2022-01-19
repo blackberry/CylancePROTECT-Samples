@@ -13,7 +13,7 @@
  * limitations under the License.
  *
  */
-let initalState = {
+let initialState = {
   loading: false,
   success: false,
   isError: false,
@@ -27,7 +27,7 @@ import {
   GET_QUERY_RESULT_ERROR,
 } from '../../actions/instaQuery/queryResults';
 
-const reducer = (state = initalState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_QUERY_RESULT_SUCCESS:
       return {

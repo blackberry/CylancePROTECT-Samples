@@ -13,7 +13,7 @@
  * limitations under the License.
  *
  */
-let initalState = {
+let initialState = {
   loading: false,
   success: false,
   isError: false,
@@ -30,7 +30,7 @@ import {
   GET_DEVICES_ERROR,
 } from '../../actions/devices/devices';
 
-const reducer = (state = initalState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ALL_DEVICES_COLLECTED:
       return {

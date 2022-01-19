@@ -22,6 +22,19 @@ this open source application to fit your Cylance use-case.
 If that does not work, it should list the UUID of the device, then try
 - `react-native run-ios  --udid your_id`
 
+# Registering for Push Notifications 
+
+### Where do I put my Google-Services.json for Android Simulator Notifications? 
+1. Get config file for Android in Firebase Console
+2. place contents into `/android/app/src/debug/google-services.json` & `/android/app/google-services.json` 
+3. When running, navigate to the settings page of the application and connect to your running notification server to register for notifications.
+### Where do I put my GoogleServices-Info.plist for iOS Physical Device Notifications? 
+1. Configure your physical device with APN services console
+2. Get config file for iOS in Firebase Console
+3. place contents into `/ios/GoogleServices-Info.plist` 
+4. When running, navigate to the settings page of the application and connect to your running notification server to register for notifications.
+
+
 ## What API's does this application leverage? 
 - Generating a valid JWT token
 - Getting authenticated
@@ -73,3 +86,7 @@ A wrapper for the Cylance v2 API in Javascript, implemented using React Native u
 * library/
 	* cylance-apis.js 
 		* *wrapper around axios rest calls* 
+
+### Questions? Contact Authors 
+- Matthew Falkner | mfalkner@blackberry.com 
+- Nathaniel Johnston | najohnston@blackberry.com

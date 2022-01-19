@@ -13,7 +13,7 @@
  * limitations under the License.
  *
  */
-let initalState = {
+let initialState = {
   loading: false,
   success: false,
   isError: false,
@@ -28,7 +28,7 @@ import {
   RESET_POST_ARCHIVE_REDUCER,
 } from '../../actions/instaQuery/archiveQuery';
 
-const reducer = (state = initalState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case POST_ARCHIVE_SUCCESS:
       return {
@@ -52,7 +52,7 @@ const reducer = (state = initalState, action) => {
         error: '',
       };
     case RESET_POST_ARCHIVE_REDUCER:
-      return initalState;
+      return initialState;
     default:
       return state;
   }

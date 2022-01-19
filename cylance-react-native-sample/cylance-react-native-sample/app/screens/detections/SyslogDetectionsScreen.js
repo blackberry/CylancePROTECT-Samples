@@ -71,6 +71,7 @@ class DetectionsScreen extends React.Component {
         </Layout>
       );
     }
+
     if (this.props.isDetectionsLoading) {
       return (
         <Layout style={styles.container}>
@@ -134,10 +135,12 @@ class DetectionsScreen extends React.Component {
               <Layout>
                 <TopNavigation title="" alignment="center" />
                 <Text category="h4">{'Error'}</Text>
-                <Text>{this.props.dectectionsError.message}</Text>
-                <Text>
-                  Unable to GET '{this.props.dectectionsError.config.url}'
-                </Text>
+                {this.props.detectionsError !== '' && <Text>{this.props.detectionsError.message}</Text>}
+                {this.props.detectionsError !== '' && 
+                  <Text>
+                    Unable to GET '{this.props.detectionsError.config.url}'
+                  </Text>
+                }
               </Layout>
             </SafeAreaView>
           </Layout>
@@ -162,16 +165,14 @@ function mapStateToProps(state) {
     detectionsData: state.syslogDetections.data,
     isDetectionsLoading: state.syslogDetections.loading,
     isDetectionsSuccess: state.syslogDetections.success,
-    isDetectionsError: state.syslogDetections.isError,
-    dectectionsError: state.syslogDetections.error,
-    totalPages: state.syslogDetections.totalPages,
-    isAllData: state.syslogDetections.isAllData,
+    detectionsError: state.syslogDetections.error,
   };
 }
 function mapDispatchToProps(dispatch) {
   return {
-    getAllLoggedDetections: () =>
-      dispatch(detectionActions.getAllLoggedDetections()),
+    getAllLoggedDetections: () => {
+      dispatch(detectionActions.getAllLoggedDetections())
+    },
     resetAllLoggedDetections: () =>
       dispatch(detectionActions.resetAllLoggedDetections()),
   };

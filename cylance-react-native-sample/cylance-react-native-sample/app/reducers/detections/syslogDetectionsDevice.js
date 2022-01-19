@@ -13,7 +13,7 @@
  * limitations under the License.
  *
  */
-let initalState = {
+let initialState = {
   loading: false,
   success: false,
   // isError: false,
@@ -28,7 +28,7 @@ import {
   RESET_LOGGED_DETECTIONS_DEVICE,
 } from '../../actions/detections/syslogDetectionsDevice';
 
-const reducer = (state = initalState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_LOGGED_DETECTIONS_DEVICE_SUCCESS:
       return Object.assign({}, state, {
@@ -49,7 +49,7 @@ const reducer = (state = initalState, action) => {
         error: '',
       });
     case RESET_LOGGED_DETECTIONS_DEVICE:
-      return initalState;
+      return initialState;
     default:
       return state;
   }

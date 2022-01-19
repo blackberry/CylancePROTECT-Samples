@@ -18,7 +18,8 @@ import thunk from 'redux-thunk';
 import reducer from './reducers/index';
 import logger from 'redux-logger';
 import {persistStore, persistReducer} from 'redux-persist';
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { composeWithDevTools } from 'remote-redux-devtools'
 
 const persistConfig = {
   key: 'root',
@@ -26,11 +27,11 @@ const persistConfig = {
 };
 
 const persistedReducer = persistReducer(persistConfig, reducer);
-
 const middlewares = [thunk, logger];
 // export default store;
 export default () => {
-  let store = createStore(persistedReducer, applyMiddleware(...middlewares));
+  //https://dev.to/dev_astador/how-to-debug-redux-in-a-react-native-app-4b19
+  let store = createStore(persistedReducer, composeWithDevTools(applyMiddleware(...middlewares)));
   let persistor = persistStore(store);
   return {store, persistor};
 };
