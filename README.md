@@ -1,2 +1,2 @@
 # BlackBerry-Protect-REST-API-Samples
-Sample applications making use of BlackBerry Protect REST APIs
+Sample applications making use of CylancePROTECT APIs
