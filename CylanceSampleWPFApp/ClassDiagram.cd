@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="CylanceSampleWPFApp.CylanceSampleWPFAppForm">
+    <Position X="1" Y="2.5" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="CylanceSampleWPFApp.CylanceSampleWPFAppForm.SafeCallDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CylanceSampleWPFAppForm.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QCEAIJCwgDQAyJCwWACIMBFCIAOABiABBSEYAADwRII=</HashCode>
+      <FileName>CylanceSampleWPFAppForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CylanceSampleWPFApp.Prompt">
+    <Position X="4.75" Y="9.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>CylanceSampleWPFAppForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CylanceSampleWPFApp.CylanceSampleWPFAppMain">
+    <Position X="1" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>CylanceSampleWPFAppMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CylanceSampleWPFApp.SyslogServer">
+    <Position X="4.75" Y="6" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAQEIAAAAAAAAAAAAAAAAAAAAAAQAAAAEIBAA=</HashCode>
+      <FileName>SyslogServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CylanceSampleWPFApp.Cylance">
+    <Position X="4.75" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>ICAAAAAAAQAAQABEAQAEABIAAAAAAAAAMABgAAYEAgA=</HashCode>
+      <FileName>Cylance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CylanceSampleWPFApp.InvalidInputException" Collapsed="true">
+    <Position X="8.5" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Cylance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CylanceSampleWPFApp.AuthTokenRequest" Collapsed="true">
+    <Position X="8.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cylance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CylanceSampleWPFApp.AuthTokenResponse" Collapsed="true">
+    <Position X="8.5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cylance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CylanceSampleWPFApp.Pagination" Collapsed="true">
+    <Position X="10.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABI=</HashCode>
+      <FileName>Cylance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CylanceSampleWPFApp.JwtClaims" Collapsed="true">
+    <Position X="10.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAEAAAAAIAAAAAAAAAAAAAAAAAAQQAAAAAAAAgA=</HashCode>
+      <FileName>Cylance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CylanceSampleWPFApp.CylanceConfig">
+    <Position X="8.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAgAAQAAAA=</HashCode>
+      <FileName>Cylance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
